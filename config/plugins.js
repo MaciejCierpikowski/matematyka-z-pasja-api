@@ -18,4 +18,16 @@ module.exports = ({ env }) => ({
         },
       },
     },
+    email: {
+      config: {
+        provider: 'sendgrid',
+        providerOptions: {
+          apiKey: env('SENDGRID_API_KEY'),
+        },
+        settings: {
+          defaultFrom: 'julita.klocek@interia.pl',
+          defaultReplyTo: 'julita.klocek@interia.pl',
+        },
+      },
+    },
   });
